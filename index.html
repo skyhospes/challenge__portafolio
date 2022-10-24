@@ -7,20 +7,24 @@
     <title>Portafolio challenge</title>
     <link href='https://css.gg/css' rel='stylesheet'>
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/reset.css">
 </head>
 <body>
 
     <header class="header">
         <nav class="navbar">
             <div class="container">
-                <a href="#home" class="logo"><i class="gg-code-slash"></i>Camilo orjuela</a>
+                <div class="logo">
+                    <a href="#home"><i class='bx bx-code-alt'></i></i> Camilo orjuela</a>
+                </div>
                 <ul>
-                    <li><a href="#sobreMi">Sobre mi</a></li>
+                    <li><a href="#sobremi">Sobre mi</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#hobbies">Hobbies</a></li>
                     <li><a href="#formacion">Formacion</a></li>
                     <li><a href="#proyectos">Proyectos</a></li>
-                    <li><a href="#contactos">Contactos</a></li>
+                    <li><a href="#contacto">Contactos</a></li>
                 </ul>
             </div>
         </nav>
@@ -32,7 +36,7 @@
                 <h3>Hola, yo soy</h3>
                 <h1>Camilo Orjuela</h1>
                 <h5>soy developer designer <span>de Bogota, Colombia</span></h5>
-                <p>tengo certificacion en diseño web adaptable por freecodecamp y actualmente estoy participando del proyecto Oracle ONe en Alura Latam.</p>
+                <p>Eh sido certificado en diseño web adaptable por freecodecamp y actualmente estoy participando del proyecto Oracle ONe en Alura Latam.</p>
             
                 <div class="social">
                     <a href="#"><i class='bx bxl-github'></i>Github</a>
@@ -47,64 +51,84 @@
         </section>
     </main>
 
-    <section class="about" id="sobreMi">
-        <h3 class="sobremi">Sobre mi</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed esse laboriosam, soluta similique iure quaerat adipisci magni. Ab nemo voluptates quia libero dolore voluptas tempore illum debitis facere. Suscipit tempore iusto eligendi est fugit necessitatibus, itaque, excepturi animi, ab corrupti sed placeat.</p>
+    <section class="about" id="sobremi">
+        
+        <div class="wrp">
+            <h2>Sobre mi</h2>
+            <p>Estudie medio año como técnico en programación de software donde aprendí el funcionamiento de bases de datos y lógica de programación con java después de eso trabaje como documentador registrando datos y procesos de una base de datos. también eh realizado varias paginas web para mejorar mis habilidades y a la vez armar un portafolio donde poder ver mi trabajo.</p>
+        </div>
+        
     </section>
 
-    <section class="card" id="skills">
-        
-        <div class="card__skills">
+    <section class="skills" id="skills">
+
+        <h2 class="titulo">Skills</h2>
+
+        <div class="card__container">
+            <div class="card">
             <i class='bx bxl-html5' ></i>
             <h3>HTML5</h3>
-        </div>
-        <div class="card__skills">
-            <i class='bx bxl-javascript'></i>
-            <h3>JavaScript</h3>
-        </div>
-        <div class="card__skills">
-            <i class='bx bxl-css3' ></i>
-            <h3>CSS</h3>
+            </div>
+            <div class="card">
+                <i class='bx bxl-javascript'></i>
+                <h3>JavaScript</h3>
+            </div>
+            <div class="card">
+                <i class='bx bxl-css3' ></i>
+                <h3>CSS</h3>
+            </div>
         </div>
 
     </section>
 
-    <section class="card" id="hobbies">
-        
-        <div class="card__hobbies">
+    <section class="hobbies" id="hobbies">
+
+        <h2 class="titulo">Hobbies</h2>
+
+        <div class="card__container">
+            <div class="card">
             <i class='bx bx-paint'></i>
             <h3>Dibujar</h3>
-        </div>
-        <div class="card__hobbies">
-            <i class="gg-games"></i>
-            <h3>Videojuegos</h3>
-        </div>
-        <div class="card__hobbies">
-            <i class="gg-tv"></i>
-            <h3>Ver series</h3>
+            </div>
+            <div class="card">
+                <i class="gg-games"></i>
+                <h3>Videojuegos</h3>
+            </div>
+            <div class="card">
+                <i class="gg-tv"></i>
+                <h3>Ver series</h3>
+            </div>
+            <div class="card">
+                <i class="gg-laptop"></i>
+                <h3>Computacion</h3>
+            </div>
         </div>
         
     </section>
 
-    <section class="formacion" id="formacion">
-        <h3>Formacion academica</h3>
+    <section class="formacion__row" id="formacion">
+
+        <h2 class="titulo">Formacion academica</h2>
+
         <div>
             <img src="" alt="">
-            <h5></h5>
+            <h4></h4>
             <p></p>
         </div>
         <div>
             <img src="" alt="">
-            <h5></h5>
+            <h4></h4>
             <p></p>
         </div>
     </section>
 
     <section class="proyectos" id="proyectos">
+        <h2>Proyectos</h2>
 
     </section>
 
-    <section class="contactos" id="contacto">
+    <section class="contacto" id="contacto">
+        <h2>contacto</h2>
 
     </section>
     
