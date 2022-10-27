@@ -6,23 +6,78 @@
 }
 
 html{
-    background: #0f0c29;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: #262626;
 }
 
 a{
     text-decoration: none;
 }
 
+html::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  html::-webkit-scrollbar-track {
+    background: #000;
+  }
+  html::-webkit-scrollbar-thumb {
+    background: #E8AB08;
+    border-radius: 5rem;
+  }
+
+/*css menu navegacion*/
+
+  ul li a {
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    margin: 20px 0;
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    transition: 0.5s;
+    z-index: 1;
+  }
+  ul li a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid #E8AB08;
+    border-bottom: 2px solid #E8AB08;
+    transform: scaleY(2);
+    opacity: 0;
+    transition: 0.3s;
+  }
+  ul li a:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #E8AB08;
+    transform: scale(0);
+    opacity: 0;
+    transition: 0.3s;
+    z-index: -1;
+  }
+  ul li a:hover {
+    color: #fff;
+  }
+  ul li a:hover:before {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  ul li a:hover:after {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+
 .header{
-    position: fixed;
-    z-index: 1000px;
     top: 0;
     width: 100%;
-    background: #0f0c29;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .container{
@@ -34,13 +89,12 @@ a{
 
 .navbar{
     overflow: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 15px;
 }
 
 .logo{
     float: left;
-    padding-top: 10px;
+    padding-top: 15px;
     font-size: 1.5rem;
 }
 
@@ -51,19 +105,18 @@ a{
 
 .navbar ul li{
     float: left;
+    margin-left: 10px;
 }
 
 .navbar ul li a{
     display: block;
-    padding: 15px;
+    padding: 6px;
 }
 
-.home{
-    padding: 100px 18%;
-    background: #0f0c29;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/*css home*/
 
+.home{
+    padding: 0 10%;
     min-height: 100vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -118,10 +171,13 @@ span{
     color: #E8AB08;
 }
 
+/*css sobre mi*/
+
 .about{
-    background: #0B0614;
+    background: #636363;
     text-align: justify;
-    padding: 80px;
+    padding: 50px 0;
+    padding-left: 80px;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -135,17 +191,22 @@ span{
     font-size: 1.5rem;
 }
 
+/*------*/
+
 .titulo{
     font-size: 2rem;
     text-align: center;
     font-weight: 300;
 }
 
+/*-----*/
+/*css skills y hobbies*/
+
 .card__box{
     width: 100%;
     max-width: 1000px;
     margin: auto;
-    margin-top: 3rem;
+    padding-top: 40px;
 }
 
 .card__container{
@@ -179,9 +240,9 @@ span{
 }
 
 .formacion{
-    background: #0B0614;
+    background: #636363;
     margin-top: 2rem;
-    padding-top: 2rem;
+    padding: 40px;
 }
 
 .container__formacion{
@@ -207,3 +268,182 @@ span{
     font-size: small;
 }
 
+/*css proyectos*/
+
+.proyectos{
+    padding-top: 40px;
+}
+
+.container__proyectos{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card__father{
+    margin: 20px;
+    perspective: 1000px;
+}
+
+.card__father:hover .card__proyecto{
+    transform: rotateY(180deg);
+}
+
+.card__proyecto{
+    width: 350px;
+    height: 250px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 1200ms;
+}
+
+.card__front{
+    background-size: cover;
+    background-position: center;
+}
+
+.card__front,
+.card__back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+}
+
+.card__back{
+    transform: rotateY(180deg);
+    background-color: #0B0614;
+}
+
+.body__card__front{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #000;
+    transform: translateZ(60px);
+}
+
+.bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+
+.body__card__back{
+    padding: 40px;
+    text-align: center;
+    transform: translateZ(60px);
+}
+
+.body__card__back input{
+    padding: 10px 40px;
+    margin-top: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background: #58B0F6;
+    box-shadow: 1px 1px 30px -5px #58B0F6;
+    border-radius: 10px;
+    transition: box-shadow 600ms;
+}
+
+.body__card__back input:hover{
+    box-shadow: 1px 1px 30px 0px #449de6;
+}
+
+/*css contactos*/
+
+.contacto{
+    padding: 0 10%;
+}
+
+.contacto h2{
+    margin-bottom: 1rem;
+}
+
+.contact{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    align-items: center;
+    grid-gap: 6rem;
+}
+
+.contacto__img img{
+    max-width: 100%;
+    width: 720px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.contacto__form form{
+    position: relative;
+}
+
+.contacto__form form input, form textarea{
+    width: 90%;
+    padding: 17px;
+    border: none;
+    outline: none;
+    background: #191919;
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+    border-radius: 10px;
+}
+
+.contacto__form textarea{
+    resize: none;
+    height: 200px;
+}
+
+.contacto__form form .btn{
+    display: inline-block;
+    background: #58B0F6;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    width: 220px;
+    transform: ease .20s;
+    cursor: pointer;
+}
+
+.contacto__form form .btn:hover{
+    border: 2px solid #58B0F6;
+    background: #191919;
+    transform: scale(1.1);
+}
+
+
+
+/*css footer*/
+
+.footer__copy {
+    display: block;
+    margin: 2.5rem 0 2rem;
+    text-align: center;
+  }
+
+
+  
