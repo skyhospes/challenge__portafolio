@@ -11,36 +11,42 @@
 </head>
 <body>
 
-    <header class="header">
+    <header class="header" id="inicio">
+        
         <nav class="navbar">
-            <div class="container">
-                <div class="logo">
-                    <a href="#home"><i class="fa-solid fa-code"></i> Camilo orjuela</a>
-                </div>
-                <ul>
-                    <li><a href="#sobremi">Sobre mi</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#hobbies">Hobbies</a></li>
-                    <li><a href="#formacion">Formacion</a></li>
-                    <li><a href="#proyectos">Proyectos</a></li>
-                    <li><a href="#contacto">Contactos</a></li>
-                </ul>
+            <div class="logo">
+                <a href="#home"><i class="fa-solid fa-code"></i> Camilo orjuela</a>
             </div>
+            <div class="container">
+                <i id="menu-btn" class="fa-solid fa-bars"></i>
+            </div>
+                <div class="menu"> 
+                    <ul>
+                        <li class="icon__home"><a href="#inicio"><i class="fa-solid fa-house"></i></a></li>
+                        <li><a href="#sobremi">Sobre mi</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#hobbies">Hobbies</a></li>
+                        <li><a href="#formacion">Formacion</a></li>
+                        <li><a href="#proyectos">Proyectos</a></li>
+                        <li><a href="#contacto">Contactos</a></li>
+                    </ul>
+                </div>
+    
         </nav>
     </header>
 
     <main class="main">
         <section class="home" id="home">
             <div class="home__text">
-                <h3>Hola, yo soy</h3>
+                <h3>Hola, mi nombre es</h3>
                 <h1>Camilo Orjuela</h1>
                 <h5>soy developer designer <span>de Bogota, Colombia</span></h5>
                 <p>Eh sido certificado en diseño web adaptable por freecodecamp y actualmente estoy participando del proyecto Oracle ONe en Alura Latam.</p>
             
                 <div class="social">
-                    <a href="#"><i class="fa-brands fa-github"></i> Github</a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i> Linkedin</a>
-                    <a href="#"><i class="fa-solid fa-file-pdf"></i> Curriculo</a>
+                    <a href="https://github.com/skyhospes" target="_blank"><i class="fa-brands fa-github"></i> Github</a>
+                    <a href="https://www.linkedin.com/in/camilo-orjuela/" target="_blank"><i class="fa-brands fa-linkedin"></i> Linkedin</a>
+                    <a download="" href="doc/Curriculum.pdf"><i class="fa-solid fa-file-pdf"></i> Curriculum</a>
                 </div>
 
             </div>
@@ -240,11 +246,13 @@
 
     </section>
     
-    <footer class="footer container">
+    <footer class="footer__container">
         <div class="footer__copy">
             Derechos reservados camilo orjuela 2022 <i class="fa-regular fa-copyright"></i>
         </div>
     </footer>
 
+    <script src="js/menu.js"></script>
+    
 </body>
 </html>
