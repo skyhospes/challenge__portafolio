@@ -414,8 +414,8 @@ span{
     outline: none;
     background: #191919;
     font-size: 1.1rem;
-    margin-bottom: 0.7rem;
-    border-radius: 10px;
+    margin-bottom: 0.8rem;
+    border-radius: 10px; 
 }
 
 .contacto__form textarea{
@@ -441,6 +441,18 @@ span{
     border: 2px solid #58B0F6;
     background: #191919;
     transform: scale(1.1);
+}
+
+.input-container span i{
+    color: rgb(214, 16, 16);
+}
+.input-container span{
+    color: rgb(214, 16, 16);
+    font-style: italic;
+}
+
+.error{
+    display: none;
 }
 
 /*css footer*/

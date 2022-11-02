@@ -41,7 +41,7 @@
                 <h3>Hola, mi nombre es</h3>
                 <h1>Camilo Orjuela</h1>
                 <h5>soy developer designer <span>de Bogota, Colombia</span></h5>
-                <p>Eh sido certificado en diseño web adaptable por freecodecamp y actualmente estoy participando del proyecto Oracle ONe en Alura Latam.</p>
+                <p>Eh sido certificado en diseño web adaptable por freecodecamp y actualmente estoy participando del proyecto Oracle ONE en Alura Latam.</p>
             
                 <div class="social">
                     <a href="https://github.com/skyhospes" target="_blank"><i class="fa-brands fa-github"></i> Github</a>
@@ -147,24 +147,6 @@
 
             <div class="card__father">
                 <div class="card__proyecto">
-                    <div class="card__front" style="background-image: url(img/comidarap.png);">
-                        <div class="bg"></div>
-                        <div class="body__card__front">
-                            <h3>Web de comidas rapida</h3>
-                        </div>
-                    </div>
-                    <div class="card__back">
-                        <div class="body__card__back">
-                            <p>Un proyecto diseñado con html css y javascrip</p>
-                            <input type="button" value="Repositorio">
-                            <input type="button" value="Demo">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card__father">
-                <div class="card__proyecto">
                     <div class="card__front" style="background-image: url(img/encriptador.png);">
                         <div class="bg"></div>
                         <div class="body__card__front">
@@ -174,8 +156,8 @@
                     <div class="card__back">
                         <div class="body__card__back">
                             <p>Un trabajo realisado para un curso de alura latam</p>
-                            <input type="button" value="Repositorio">
-                            <input type="button" value="Demo">
+                            <a href="https://github.com/skyhospes/chagellen_encriptador_alura/tree/main/challenge1" target="_blank"><input type="button" value="Repositorio"></a>
+                            <a href="https://encriptadoralura.netlify.app/" target="_blank"><input type="button" value="Demo"></a>
                         </div>
                     </div>
                 </div>
@@ -192,8 +174,8 @@
                     <div class="card__back">
                         <div class="body__card__back">
                             <p>Divertido juego enfocado en javascrip</p>
-                            <input type="button" value="Repositorio">
-                            <input type="button" value="Demo">
+                            <a href="https://github.com/skyhospes/memorama-js" target="_blank"><input type="button" value="Repositorio"></a>
+                            <a href="https://memorama-js.vercel.app/" target="_blank"><input type="button" value="Demo"></a>
                         </div>
                     </div>
                 </div>
@@ -209,9 +191,29 @@
                     </div>
                     <div class="card__back">
                         <div class="body__card__back">
-                            <p>Una pagina web de viajes creada con html y css</p>
-                            <input type="button" value="Repositorio">
-                            <input type="button" value="Demo">
+                            <p>Una pagina web de viajes creada con html y css (responsive)</p>
+                            <a href="https://github.com/skyhospes/web-de-viajes" target="_blank"><input type="button" value="Repositorio"></a>
+                            <a href="https://web-de-viajes.vercel.app/" target="_blank"><input type="button" value="Demo"></a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card__father">
+                <div class="card__proyecto">
+                    <div class="card__front" style="background-image: url(img/adm-de-tareas.png);">
+                        <div class="bg"></div>
+                        <div class="body__card__front">
+                            <h3>Administrador de tareas</h3>
+                        </div>
+                    </div>
+                    <div class="card__back">
+                        <div class="body__card__back">
+                            <p>un administrador de tareas que funciona en javascrip y estas diseñado con html y css</p>
+                            <a href="https://github.com/skyhospes/administrador-tareas" target="_blank"><input type="button" value="Repositorio"></a>
+                            <a href="https://administrador-tareas.vercel.app/" target="_blank"><input type="button" value="Demo"></a>
+                            
                         </div>
                     </div>
                 </div>
@@ -234,11 +236,25 @@
                 <p>¿Quieres contactarme?</p><br>
                 <p>Complete el siguiente formulario y me pondre en contacto lo antes posible.</p><br>
                 <form action="">
-                    <input type="" placeholder="Nombre" required>
-                    <input type="email" name="email" id="" placeholder="email" required>
-                    <input type="" placeholder="ASunto" required>
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje" required></textarea>
-                    <input type="submit" name="" value="Enviar" class="btn">
+                    <div class="input-container">
+                        <span id="nombreError" class="error"><i class="fa-solid fa-circle-exclamation"></i> Este campo es requerido</span>
+                        <input name="name" id="name" class="input" type="text" placeholder="Nombre"  data-tipo="nombre">
+                    </div>
+                    <div class="input-container">
+                        <span id="emailError" class="error"><i class="fa-solid fa-circle-exclamation"></i> Este campo debe ser un correo</span>
+                        <input name="email" id="email" class="input" type="email" placeholder="Email"  data-tipo="email" >
+                    </div>
+                    <div class="input-container">
+                        <span id="asuntoError" class="error"><i class="fa-solid fa-circle-exclamation"></i> Este campo es requerido</span>
+                        <input name="asunto" id="asunto" class="input" type="text" placeholder="Asunto"  data-tipo="texto">
+                    </div>
+                    <div class="input-container">
+                        <span id="textareaError"  class="error"><i class="fa-solid fa-circle-exclamation"></i> El mensaje debe tener un minimo de 20 caracteres</span>
+                        <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Mensaje"  minlength="20"></textarea>
+                    </div>
+                    <div class="input-container">
+                        <input id="button" type="submit" name="" value="Enviar" class="btn">
+                    </div>
                 </form>
             </div>
         </div>
@@ -253,6 +269,7 @@
     </footer>
 
     <script src="js/menu.js"></script>
+    <script src="js/validaciones.js"></script>
     
 </body>
 </html>
