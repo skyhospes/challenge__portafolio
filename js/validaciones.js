@@ -28,7 +28,7 @@ function validateEmail(valueImput, divInput, divError){
 }
 
 function validateMensaje(valueImput, divInput, divError){
-    let regExp = /^[a-z0-9_-]{20,150}$/;
+    let regExp = /^[a-z0-9_-]{20,300}$/;
 
     if(regExp.test(valueImput)){
         hideError(divInput, divError);
