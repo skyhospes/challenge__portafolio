@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap');
 
 *{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: white;
 }
 
@@ -33,7 +33,7 @@ html::-webkit-scrollbar {
     margin: 20px 0;
     text-decoration: none;
     color: white;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     transition: 0.5s;
     z-index: 1;
   }
@@ -262,15 +262,16 @@ span{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 2em;
 }
 
 .formacion__card{
     width: 300px;
-    margin-bottom: 2rem;
+    margin-bottom: 2em;
 }
 
 .img__formacion img{
-    width: 250px;
+    width: 310px;
     height: 150px;
 }
 
@@ -427,7 +428,7 @@ span{
 
 .contacto__form form .btn{
     display: inline-block;
-    background: #58B0F6;
+    background: #E8AB08;
     font-size: 1.1rem;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -440,9 +441,10 @@ span{
 }
 
 .contacto__form form .btn:hover{
-    border: 2px solid #58B0F6;
+    border: 2px solid #E8AB08;
     background: #191919;
     transform: scale(1.1);
+    transition: ease 0.20s
 }
 
 .input-container span i{
